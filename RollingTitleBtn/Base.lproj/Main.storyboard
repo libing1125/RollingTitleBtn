@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,7 +16,65 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tyd-AV-OkZ">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="pause"/>
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="146" y="449" width="46" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="pause:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UAG-Ch-bt3"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KCc-rl-FNl">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="resume"/>
+                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="146" y="591" width="46" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="resume:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IZV-C8-4VD"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Tyd-AV-OkZ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="30" id="1QM-tu-b7V"/>
+                            <constraint firstItem="KCc-rl-FNl" firstAttribute="leading" secondItem="Tyd-AV-OkZ" secondAttribute="leading" id="47U-ZQ-bA0"/>
+                            <constraint firstItem="KCc-rl-FNl" firstAttribute="trailing" secondItem="Tyd-AV-OkZ" secondAttribute="trailing" id="NRt-84-MOJ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Tyd-AV-OkZ" secondAttribute="trailing" constant="30" id="NtT-M9-Hre"/>
+                            <constraint firstItem="KCc-rl-FNl" firstAttribute="top" secondItem="Tyd-AV-OkZ" secondAttribute="bottom" constant="50" id="f0c-7T-6jj"/>
+                            <constraint firstItem="Tyd-AV-OkZ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="200" id="hnh-gI-GaG"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="Tyd-AV-OkZ"/>
+                                <exclude reference="KCc-rl-FNl"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="1QM-tu-b7V"/>
+                                <exclude reference="NtT-M9-Hre"/>
+                                <exclude reference="hnh-gI-GaG"/>
+                                <exclude reference="47U-ZQ-bA0"/>
+                                <exclude reference="NRt-84-MOJ"/>
+                                <exclude reference="f0c-7T-6jj"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="Tyd-AV-OkZ"/>
+                                <include reference="KCc-rl-FNl"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="1QM-tu-b7V"/>
+                                <include reference="NtT-M9-Hre"/>
+                                <include reference="hnh-gI-GaG"/>
+                                <include reference="47U-ZQ-bA0"/>
+                                <include reference="NRt-84-MOJ"/>
+                                <include reference="f0c-7T-6jj"/>
+                            </mask>
+                        </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
